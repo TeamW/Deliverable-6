@@ -3,8 +3,8 @@
 
 *.log
 
-*.pdf
-
 *.gz
 
 *.toc
+
+d6.pdf
