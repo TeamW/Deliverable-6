@@ -29,13 +29,13 @@
 \newpage
 
 \section{System Architecture}
-
 \subsection{Diagram}
-
-\includegraphics[width=\textwidth]{PSDDiagram.pdf}
-
+\begin{centering}
+  \includegraphics[width=0.7\textwidth,angle=270]{PSDDiagram.pdf}
+\end{centering}
 \subsection{Rationale}
-
+We decided upon this system architecture as any component of the system should have the properties of being interchangeable with another substitutable component (substitutable defined as being having the same API). For this reason, we grouped relatable functionalities together and made them into a component. The ``Ad Manager'' and the ``Databases'' components could be combined together into one large ``Database'' component, but we did not want to create a coupling between these components - the ``Ad Manager'' may well have a database inside it, but the information inside this database is managed in a different way from the other data in the system such as users and companies.
+All other components are defined by the primary reason that any component in the system can be replaced with no effect to the overall working of the system.
 \newpage
 
 \section{State Charts}
