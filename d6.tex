@@ -90,10 +90,11 @@ None. Possibly extend this to include Main/run?
 
 \textbf{Package:} uk.ac.glasgow.internman.admin
 
-This is the interface for the administration part of the database, accessable by
+This is the interface for the administration part of the database, accessible by
 only the course coordinator.
 This assumes that the user using this interface has Course Coordinator
-rights. \\ 
+rights.
+
 \begin{itemize}
 
 \item{\textbf{public void approveAdvertisement(Advertisement advertisement)}
@@ -109,7 +110,7 @@ Approves an advertisement.
 \item{\textbf{public boolean addCompany(String name, String email, String
     password)} 
 
-Interface to add a company to the database, fuctionality is delegated to the
+Interface to add a company to the database, functionality is delegated to the
 database component.
 Error checking is done inside this function, but not whether or not a company
 currently exists inside the companies database.
@@ -125,7 +126,7 @@ the success of this function.}
 
 Approves the offer most recently accepted by the student with this matriculation
 id. 
-\textbf{Preconditions:} Student with this matricualtion must have a successful
+\textbf{Preconditions:} Student with this matriculation must have a successful
 application and must have notified the Course Coordinator of their success.
 
 \textbf{Invariants:} Student must not accept another successful application
@@ -133,7 +134,7 @@ during this review process.
 
 \textbf{Postconditions:} Students status is changed to a success status.}
 
-\item{\textbf{public void assignAcademinVisitor(String matriculation, String
+\item{\textbf{public void assignAcademicVisitor(String matriculation, String
     visitorName)}
 Sends email to student, visitor and employer manager to let them know about
 assignment. 
@@ -154,6 +155,8 @@ assignment.
 \subsection{Database}
 
 \subsubsection{Class Diagram}
+
+\includegraphics{databaseClassDiagram.png}
 
 \subsubsection{API Specification}
 
