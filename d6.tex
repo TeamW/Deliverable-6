@@ -90,6 +90,17 @@ system can be replaced with no effect to the overall working of the system.
 
 \subsubsection{Rationale}
 
+The form of the state chart was decided based on the simplistic nature of an 
+advertisements status. All adverts start off life as pending, after a company
+has made the initial submission. They can be revised at any time prior to either
+being declined by the course coordinator, where they are removed from the system
+(and feedback sent to the company) or published for viewing.
+
+An addition (which requires clarification) is the `Position Filled' state and
+associated end state. This is asked in the questions section at the end of the
+document. As such, that part of the diagram is under review pending further
+information.
+
 \subsection{Student}
 
 \subsubsection{Diagram}
@@ -290,5 +301,22 @@ is known to the application's user database.
 \newpage
 
 \section{Acceptance Test Plan}
+
+\section{Requirements Specification Questions}
+
+\begin{itemize}
+
+\item{Employers are required to register however during the registration process
+only the company name and email is supplied (registerNewEmployer()). However,
+users are required to supply their username and password to login. Based on the
+assumption that the employer/company name is the username, what would the
+password initially be set to?}
+
+\item{How does the course coordinator decline an offer a student has received?}
+
+\item{When and how does an approved/published advertisement disappear from the 
+set of available advertisements?}
+
+\end{itemize}
 
 \end{document}
