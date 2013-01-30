@@ -152,6 +152,66 @@ an outside element.
 
 \subsubsection{API Specification}
 
+\textbf{Full name}: public abstract interface AdManager\\
+
+\textbf{Package}: uk.ac.glasgow.internman.AdManager
+
+Each of the 3 available user types will be able to interact with this interface
+but if the user has course coordinator rights then all available adverts can be
+manipulated (published, denied etc), if they have registered employer rights
+they'll be able to create/append and submit adverts for review and if they are
+of type student, they'll only be able to view all published adverts.
+
+\textbf{Methods}
+
+\begin{itemize}
+
+\item{\textbf{public Advertisement createNewAdvertisement(String applicationDetails)}
+
+Create a new advert with the specified details
+
+\textbf{Preconditions:} User must be of type Course Coordinator or Employer
+
+\textbf{Postconditions:} Advert is created and appended to a list of adverts awaiting 
+review within the database.}
+
+\item{\textbf{public Advertisement selectAdvertisement(Integer index)}
+
+Given an index, select and display the appropriate advert from the database.
+
+\textbf{Preconditions:} Must be a valid index
+
+\textbf{Postconditions:} Advert is displayed after the index was successfully matched
+in the database.}
+
+\item{\textbf{public void reviseAdvertisement(Integer index, Advertisement revise)}
+
+Using an index to select an existing advert, change its contents with that of another supplied.
+
+\textbf{Preconditions:} Must be a valid index
+
+\textbf{Postconditions:} Advert is successfully replaced with the revised one and the changes
+can be seen dependant on its state, by others.}
+
+\item{\textbf{public Map getAdvertisements()}
+
+For use mostly by students who wish to see all available published adverts.
+
+\textbf{Preconditions:} Must be at least one published advert
+
+\textbf{Postconditions:} Advert(s) are displayed one after another in the UI with their
+descriptions displayed.}
+
+\item{\textbf{public void publishAdvertisement(Integer adIndex, String comment)}
+
+Course coordinator only, select an advert and give feedback to the employer on why the advert was published.
+
+\textbf{Preconditions:} Must be a valid index, comment must be supplied.
+
+\textbf{Postconditions:} State of the selected advert is changed to published and can be
+successfully viewed by students.}
+
+\end{itemize}
 \newpage
 
 \subsection{Session}
