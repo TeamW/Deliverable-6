@@ -151,6 +151,8 @@ an outside element.
 
 \subsubsection{API Specification}
 
+\newpage
+
 \subsection{Session}
 
 \subsubsection{Class Diagram}
@@ -158,6 +160,8 @@ an outside element.
 \subsubsection{API Specification}
 
 None. Possibly extend this to include Main/run?
+
+\newpage
 
 \subsection{User Interface}
 
@@ -184,6 +188,8 @@ Runs the UI.
 \textbf{Postconditions:} UI is displayed.}
 
 \end{itemize}
+
+\newpage
 
 \subsection{Admin}
 
@@ -285,11 +291,44 @@ Records grade for visit. EMail to student and employer.
 \textbf{Postconditions:} }
 
 \end{itemize}
+
 \subsection{Login Prompt}
 
 \subsubsection{Class Diagram}
 
+\includegraphics{Login.png}
+
 \subsubsection{API Specification}
+
+\textbf{Full name}: public abstract interface Login\\
+
+\textbf{Package}: uk.ac.glasgow.internman.login
+
+A user is presented with a prompt into which they must enter their MyCampus 
+username and password. If the combination is valid, the user is logged in and 
+presented with the summary of advertisements view.\\
+
+\textbf{Methods}
+
+\begin{itemize}
+
+\item{\textbf{public Boolean verifyUser(String Id,String password)}
+
+Check if a user is in database 
+
+\textbf{Preconditions:} No user is currently logged in at the same user 
+interface.
+
+\textbf{Postconditions:} User is logged in, if username and password combination 
+is correct.}
+
+\item{\textbf{public Boolean userLoggedIn(String id)}
+
+Check if a user is already logged in at the same user interface.}
+
+\end{itemize}
+
+\newpage
 
 \subsection{Database}
 
