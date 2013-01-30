@@ -1,0 +1,86 @@
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & AdminTCRegisterEmployer\\
+\hline
+Use Case & Register Employer\\
+\hline
+Setup & \\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes & UtilityTCLogin3\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/RegEmpl\\
+\hline
+Inputs & String name: ``MegaCorp'', String email ``bossman@megacorp.com''\\
+\hline
+Outcome & Company ``MegaCorp'' is added as a user to the system with
+the above details.\\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & AdminTCApproveOffer\\
+\hline
+Use Case & Approve Accepted Offer\\
+\hline
+Setup & Must be one advertisement relating to the submitted details.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes & UtilityTCLogin3\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/Approve\\
+\hline
+Inputs & String matriculation: ``0024601J''\\
+\hline
+Outcome & The most recent accepted placement for the above
+matriculation is accepted.\\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & AdminTCPublishAdvertisement\\
+\hline
+Use Case & Publish Advertisement\\
+\hline
+Setup & Must be one advertisement relating to the submitted details.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes & UtilityTCLogin3\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/Publish\\
+\hline
+Inputs & Integer advertisementIndex: ``24601'', String comment:
+``I hope this helps you find the man you are looking for!''\\
+\hline
+Outcome & The advertisement with the above index is now published for
+a student to view and the comment is sent to the company that
+published the advertisement.\\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & StudentTCNotifiyAccepted\\
+\hline
+Use Case & Publish Notify accepted offer\\
+\hline
+Setup & Role below must exist in the system.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes & UtilityTCLogin1\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/Notify\\
+\hline
+Inputs & Role role: ``Software Engineer'', String managerName: ``Chris
+P. Bacon'', String managerEmail: ``manager@company.com'')\\
+\hline
+Outcome & The student who has invoked this function has sent an email
+to the course coordinator about this placement success.\\
+\hline
+\end{tabularx}
