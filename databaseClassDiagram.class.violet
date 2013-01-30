@@ -49,11 +49,7 @@ gUIDDatabaseLocation : String</string>
     </void>
     <void property="methods">
      <void property="text">
-      <string>addCompany() : boolean
-getCompany() : Company
-getStudent() : Student
-updateStudent() : void
-connectToStudentDatabase() : boolean
+      <string>connectToStudentDatabase() : boolean
 disconnectFromStudentDatabase() : void
 connectToCompanyDatabase() : boolean
 disconnectFromCompanyDatabase() : void
