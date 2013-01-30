@@ -249,3 +249,27 @@ Outcome & The student who has invoked this function has sent an email
 to the course coordinator about this placement success.\\
 \hline
 \end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & TCAssignVisitor\\
+\hline
+Use Case & Assign Academic Visitor\\
+\hline
+Setup & A student has an approved placement and is ready to have their
+placement visit.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes & UtilityTCLogin1\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/AssignVisitor\\
+\hline
+Inputs & Student name who has internship, Visitor name and email.\\
+\hline
+Outcome & The Visitor is notified which student they are to visit. The student's
+record is updated with the visitor information.\\
+\hline
+\end{tabularx}
