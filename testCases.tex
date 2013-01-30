@@ -1,3 +1,161 @@
+\section{Acceptance Test Plan}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogin1\\
+\hline
+Use Case & Login\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LoginStudent\\
+\hline
+Inputs & String username: `9876543A', String password: `LetMeIn'\\
+\hline
+Outcome & Student with GUID `9876543A' is set as the current user of the system.
+\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogin2\\
+\hline
+Use Case & Login\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LoginCompany\\
+\hline
+Inputs & String username: `TestCompany', String password: `LetMeIn'\\
+\hline
+Outcome & Company name `TestCompany' is set as the current user of the system.\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogin3\\
+\hline
+Use Case & Login\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LoginCC\\
+\hline
+Inputs & String username: `CourseCoordinator', String password: `LetMeIn'\\
+\hline
+Outcome & The course coordinator `CourseCoordinator' is set as the current user 
+of the system.\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogout1\\
+\hline
+Use Case & Logout\\
+\hline
+Setup & Some user is logged in.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LogoutUser\\
+\hline
+Inputs &\\
+\hline
+Outcome & The current user is logged out and the corresponding session is
+closed.\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & ViewStudentSummary\\
+\hline
+Use Case & View student summary\\
+\hline
+Setup & User is logged in as Course Coordinator\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/ViewStudentSummary\\
+\hline
+Inputs &\\
+\hline
+Outcome & Information about all students enrolled on the SESP course in the current session should be displayed\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityAdSummary1\\
+\hline
+Use Case & View advertisment summary\\
+\hline
+Setup & user is logged in as Employer\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/ViewAdSummaryEmployer\\
+\hline
+Inputs &\\
+\hline
+Outcome & Adverts belonging to TestCompany are returned\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityAdSummary2\\
+\hline
+Use Case & View advertisment summary\\
+\hline
+Setup & user is logged in as Course Coordinator\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/ViewAdSummaryCC\\
+\hline
+Inputs &\\
+\hline
+Outcome & All adverts, including unpublished ones, are returned\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
 \vspace{2em}
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
@@ -19,7 +177,9 @@ Outcome & Company ``MegaCorp'' is added as a user to the system with
 the above details.\\
 \hline
 \end{tabularx}
+
 \vspace{2em}
+
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
 Identifier & AdminTCApproveOffer\\
@@ -40,7 +200,9 @@ Outcome & The most recent accepted placement for the above
 matriculation is accepted.\\
 \hline
 \end{tabularx}
+
 \vspace{2em}
+
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
 Identifier & AdminTCPublishAdvertisement\\
@@ -63,7 +225,9 @@ a student to view and the comment is sent to the company that
 published the advertisement.\\
 \hline
 \end{tabularx}
+
 \vspace{2em}
+
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
 Identifier & StudentTCNotifiyAccepted\\
