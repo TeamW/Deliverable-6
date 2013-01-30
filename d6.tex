@@ -189,18 +189,19 @@ rights.
 
 \begin{itemize}
 
-\item{\textbf{public void approveAdvertisement(Advertisement advertisement)}
+\item{\textbf{public void publishAdvertisement(Integer
+    advertisementIndex, String comment)}
 
-Approves an advertisement.
+Approves an advertisement and makes it visible to students. Sends
+comment as feedback to the employer as an email.
 
 \textbf{Preconditions:} Advertisement must be in advertisement database.
 
 \textbf{Invariants:}
 
 \textbf{Postconditions:} Advertisement is now approved.}
-
-\item{\textbf{public boolean addCompany(String name, String email, String
-    password)} 
+%%%%%%%%%%%%%%%
+\item{\textbf{public boolean registerNewEmployer(String name, String email)} 
 
 Interface to add a company to the database, functionality is delegated to the
 database component.
@@ -213,7 +214,7 @@ currently exists inside the companies database.
 
 \textbf{Postconditions:} The return value of the delegated function indicates
 the success of this function.}
-
+%%%%%%%%%%%%%%%
 \item{\textbf{public void approveAcceptedOffer(String matriculation)}
 
 Approves the offer most recently accepted by the student with this matriculation
@@ -225,13 +226,53 @@ application and must have notified the Course Coordinator of their success.
 during this review process.
 
 \textbf{Postconditions:} Students status is changed to a success status.}
-
+%%%%%%%%%%%%%%%
 \item{\textbf{public void assignAcademicVisitor(String matriculation, String
     visitorName)}
 Sends email to student, visitor and employer manager to let them know about
 assignment. 
 
 \textbf{Preconditions: An academic visit cannot be currently assigned.}
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+%%%%%%%%%%%%%%%
+\item{\textbf{public Advertisement createNewAdvertisement(String
+    applicationDetails)}
+Adds a new (not-yet-approved) advertisement into the system.
+
+\textbf{Preconditions: Advertisement should not all ready exist in the
+  system.}
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+%%%%%%%%%%%%%%%
+\item{\textbf{public Student selectStudent(String matriculation)}
+Gets handle on Student from supplied matriculation.
+
+\textbf{Preconditions: Null returned if Student is not in the map.}
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+%%%%%%%%%%%%%%%
+\item{\textbf{public Student getStudent( String matriculation)}
+Gets handle on Student from supplied matriculation.
+
+\textbf{Preconditions: Null returned if Student is not in the map.}
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+%%%%%%%%%%%%%%%
+\item{\textbf{public void recordVisitAssessment( String matriculation,
+    UoGGrade grade, String description)}
+Records grade for visit. EMail to student and employer.
+
+\textbf{Preconditions: A visit assessment should not currently be
+  assigned for this student}
 
 \textbf{Invariants:} 
 
