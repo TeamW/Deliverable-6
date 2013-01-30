@@ -429,6 +429,8 @@ Outcome & Student with GUID 9876543A is set as the current user of the system.\\
 \hline
 \end{tabularx}
 
+\vspace{2em}
+
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
 Identifier & UtilityTCLogin2\\
@@ -448,6 +450,8 @@ Inputs & String username: "TestCompany", String password: "LetMeIn"\\
 Outcome & Company name "TestCompany" is set as the current user of the system.\\
 \hline
 \end{tabularx}
+
+\vspace{2em}
 
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
@@ -469,6 +473,31 @@ Outcome & The course coordinator "CourseCoordinator" is set as the current user
 of the system.\\
 \hline
 \end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogout1\\
+\hline
+Use Case & Logout\\
+\hline
+Setup & Some user is logged in.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LogoutUser\\
+\hline
+Inputs &\\
+\hline
+Outcome & The current user is logged out and the corresponding session is
+closed.\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
 
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
@@ -510,3 +539,4 @@ advertisement disappear from the set of available advertisements?}
 \end{enumerate}
 
 \end{document}
+>>>>>>> Adds logout test case and spaces between tabular
