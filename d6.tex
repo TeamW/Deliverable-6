@@ -4,6 +4,11 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{url}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{medium-red}{rgb}{0.35,0,0}
+\hypersetup{colorlinks, linkcolor={medium-red}, citecolor={medium-red},
+urlcolor={medium-red}}
 \newcolumntype{T}{>{\centering\arraybackslash}m{0.20\textwidth}}
 \newcolumntype{L}{>{\centering\arraybackslash}m{0.74\textwidth}}
 \geometry{a4paper}
@@ -101,8 +106,8 @@ being declined by the course coordinator, where they are removed from the system
 
 An addition (which requires clarification) is the `Position Filled' state and
 associated end state. This is asked in the questions section at the end of the
-document. As such, that part of the diagram is under review pending further
-information.
+document. The question is number \ref{itm:advertDestroy}. As such, that part of 
+the diagram is under review pending further information.
 
 \subsection{Student}
 
@@ -450,7 +455,7 @@ Outcome &\\
 
 \section{Requirements Specification Questions}
 
-\begin{itemize}
+\begin{enumerate}
 
 \item{Employers are required to register however during the registration process
 only the company name and email is supplied (registerNewEmployer()). However,
@@ -460,9 +465,9 @@ password initially be set to?}
 
 \item{How does the course coordinator decline an offer a student has received?}
 
-\item{When and how does an approved/published advertisement disappear from the 
-set of available advertisements?}
+\item{\label{itm:advertDestroy} When and how does an approved/published 
+advertisement disappear from the set of available advertisements?}
 
-\end{itemize}
+\end{enumerate}
 
 \end{document}
