@@ -2,7 +2,10 @@
 \usepackage{geometry}
 \usepackage{fullpage}
 \usepackage{graphicx}
+\usepackage{tabularx}
 \usepackage{url}
+\newcolumntype{T}{>{\centering\arraybackslash}m{0.20\textwidth}}
+\newcolumntype{L}{>{\centering\arraybackslash}m{0.74\textwidth}}
 \geometry{a4paper}
 \setlength\parindent{0pt}
 \title{Deliverable 6}
@@ -361,6 +364,87 @@ is known to the application's user database.
 \newpage
 
 \section{Acceptance Test Plan}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogin1\\
+\hline
+Use Case & Login\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LoginStudent\\
+\hline
+Inputs & String username: "9876543A", String password: "LetMeIn"\\
+\hline
+Outcome & Student with GUID 9876543A is set as the current user of the system.\\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogin2\\
+\hline
+Use Case & Login\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LoginCompany\\
+\hline
+Inputs & String username: "TestCompany", String password: "LetMeIn"\\
+\hline
+Outcome & Company name "TestCompany" is set as the current user of the system.\\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & UtilityTCLogin3\\
+\hline
+Use Case & Login\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/LoginCC\\
+\hline
+Inputs & String username: "CourseCoordinator", String password: "LetMeIn"\\
+\hline
+Outcome & The course coordinator "CourseCoordinator" is set as the current user 
+of the system.\\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier &\\
+\hline
+Use Case &\\
+\hline
+Setup &\\
+\hline
+Interface &\\
+\hline
+Includes &\\
+\hline
+Procedure &\\
+\hline
+Inputs &\\
+\hline
+Outcome &\\
+\hline
+\end{tabularx}
 
 \newpage
 
