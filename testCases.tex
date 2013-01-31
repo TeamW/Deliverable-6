@@ -205,6 +205,75 @@ matriculation is accepted.\\
 
 \begin{tabularx}{\textwidth}{|T|L|}
 \hline
+Identifier & AdManTC1\\
+\hline
+Use Case & View Advertisement Detail\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman/AdManager\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/ViewAd\\
+\hline
+Inputs & Integer index: 44\\
+\hline
+Outcome & If supplied index is valid, the advert will be displayed on screen
+\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & AdManTC2\\
+\hline
+Use Case & Submit Advertisement\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman/AdManager\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/SubAd\\
+\hline
+Inputs & String applicationDetails: `me incorporated | spain | stuff | programmer | 10/06/2013-10/10/2013 | description | 10000`\\
+\hline
+Outcome & Advert is created and appended to database with this information linked to it
+\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & AdManTC3\\
+\hline
+Use Case & Revise Advertisement\\
+\hline
+Setup &\\
+\hline
+Interface & uk/ac/glasgow/internman/AdManager\\
+\hline
+Includes &\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/RevAd\\
+\hline
+Inputs & Integer index: 24, Advertisement revised\\
+\hline
+Outcome & Advert is matched in database to index and it's details are switched with the supplied advert.
+\\
+\hline
+\end{tabularx}
+
+\vspace{2em}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
 Identifier & AdminTCPublishAdvertisement\\
 \hline
 Use Case & Publish Advertisement\\
