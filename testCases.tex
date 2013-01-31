@@ -273,3 +273,26 @@ Outcome & The Visitor is notified which student they are to visit. The student's
 record is updated with the visitor information.\\
 \hline
 \end{tabularx}
+
+\begin{tabularx}{\textwidth}{|T|L|}
+\hline
+Identifier & TCRecordVisit\\
+\hline
+Use Case & Record Visit Assessment\\
+\hline
+Setup & A student has a visit assigned that has just been completed. The 
+assigned grade needs to be added to the student's record.\\
+\hline
+Interface & uk/ac/glasgow/internman\\
+\hline
+Includes & UtilityTCLogin1\\
+\hline
+Procedure & JUnit Test Case: uk/ac/glasgow/internman/tests/accept/RecordVisit\\
+\hline
+Inputs & Student name who has internship, description of student's
+performance, and associated grade..\\
+\hline
+Outcome & The student's record has a grade and textual description regarding
+their performance during the internship.\\
+\hline
+\end{tabularx}
