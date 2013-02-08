@@ -10,3 +10,5 @@
 d6.pdf
 
 *.tex~
+
+.DS_Store
