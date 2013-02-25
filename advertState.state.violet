@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_11" class="java.beans.XMLDecoder">
+<java version="1.7.0_13" class="java.beans.XMLDecoder">
  <object class="com.horstmann.violet.StateDiagramGraph">
   <void method="addNode">
    <object class="com.horstmann.violet.CircularStateNode" id="CircularInitialStateNode0"/>
@@ -57,7 +57,7 @@
    <object class="com.horstmann.violet.StateNode" id="StateNode1">
     <void property="name">
      <void property="text">
-      <string>Revised</string>
+      <string>Pending</string>
      </void>
     </void>
    </object>
@@ -66,42 +66,13 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double2"/>
-      <double>790.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double2"/>
-      <double>88.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>790.0</double>
-     <double>88.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.StateNode" id="StateNode2">
-    <void property="name">
-     <void property="text">
-      <string>Pending</string>
-     </void>
-    </void>
-   </object>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double3">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double3"/>
       <double>619.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
-      <object idref="Point2D$Double3"/>
+      <object idref="Point2D$Double2"/>
       <double>90.0</double>
      </void>
     </void>
@@ -111,148 +82,22 @@
     </void>
    </object>
   </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.StateNode" id="StateNode3">
-    <void property="name">
-     <void property="text">
-      <string>Declined</string>
-     </void>
-    </void>
-   </object>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double4">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double4"/>
-      <double>699.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double4"/>
-      <double>226.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>699.0</double>
-     <double>226.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.product.diagram.state.CircularFinalStateNode" id="CircularFinalStateNode0"/>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double5">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double5"/>
-      <double>851.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double5"/>
-      <double>253.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>851.0</double>
-     <double>253.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.StateNode" id="StateNode4">
-    <void property="name">
-     <void property="text">
-      <string>Position Filled</string>
-     </void>
-    </void>
-   </object>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double6">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double6"/>
-      <double>543.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double6"/>
-      <double>345.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>543.0</double>
-     <double>345.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.product.diagram.state.CircularFinalStateNode" id="CircularFinalStateNode1"/>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double7">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double7"/>
-      <double>577.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double7"/>
-      <double>464.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>577.0</double>
-     <double>464.0</double>
-    </void>
-   </object>
-  </void>
   <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
+   <object class="com.horstmann.violet.StateTransitionEdge">
+    <void property="label">
+     <string>submitAdvertisement</string>
+    </void>
+   </object>
    <object idref="CircularInitialStateNode0"/>
-   <object idref="StateNode2"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode2"/>
    <object idref="StateNode1"/>
   </void>
   <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
+   <object class="com.horstmann.violet.StateTransitionEdge">
+    <void property="label">
+     <string>publishAdvert</string>
+    </void>
+   </object>
    <object idref="StateNode1"/>
-   <object idref="StateNode2"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode2"/>
-   <object idref="StateNode3"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode3"/>
-   <object idref="CircularFinalStateNode0"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode0"/>
-   <object idref="StateNode4"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode4"/>
-   <object idref="CircularFinalStateNode1"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode2"/>
    <object idref="StateNode0"/>
   </void>
  </object>

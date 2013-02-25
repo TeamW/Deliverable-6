@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_11" class="java.beans.XMLDecoder">
+<java version="1.7.0_13" class="java.beans.XMLDecoder">
  <object class="com.horstmann.violet.StateDiagramGraph">
   <void method="addNode">
    <object class="com.horstmann.violet.CircularStateNode" id="CircularInitialStateNode0"/>
@@ -28,8 +28,7 @@
    <object class="com.horstmann.violet.StateNode" id="StateNode0">
     <void property="name">
      <void property="text">
-      <string>Pending Acceptance
-/notifyAcceptedOffer()</string>
+      <string>Offer Approved</string>
      </void>
     </void>
    </object>
@@ -38,42 +37,13 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double1"/>
-      <double>617.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double1"/>
-      <double>233.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>617.0</double>
-     <double>233.0</double>
-    </void>
-   </object>
-  </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.StateNode" id="StateNode1">
-    <void property="name">
-     <void property="text">
-      <string>Offer Approved</string>
-     </void>
-    </void>
-   </object>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double2">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double2"/>
       <double>636.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
-      <object idref="Point2D$Double2"/>
+      <object idref="Point2D$Double1"/>
       <double>369.0</double>
      </void>
     </void>
@@ -84,25 +54,25 @@
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.StateNode" id="StateNode2">
+   <object class="com.horstmann.violet.StateNode" id="StateNode1">
     <void property="name">
      <void property="text">
       <string>Idle</string>
      </void>
     </void>
    </object>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double3">
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double2">
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>x</string>
      <void method="set">
-      <object idref="Point2D$Double3"/>
+      <object idref="Point2D$Double2"/>
       <double>656.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
-      <object idref="Point2D$Double3"/>
+      <object idref="Point2D$Double2"/>
       <double>68.0</double>
      </void>
     </void>
@@ -113,94 +83,63 @@
    </object>
   </void>
   <void method="addNode">
-   <object class="com.horstmann.violet.StateNode" id="StateNode3">
+   <object class="com.horstmann.violet.StateNode" id="StateNode2">
     <void property="name">
      <void property="text">
-      <string>Visit Assessed</string>
+      <string>Pending Acceptance
+---------------------------------
+do/notifyAcceptedOffer()</string>
      </void>
     </void>
    </object>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double4">
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double3">
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>x</string>
      <void method="set">
-      <object idref="Point2D$Double4"/>
-      <double>648.0</double>
+      <object idref="Point2D$Double3"/>
+      <double>589.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
-      <object idref="Point2D$Double4"/>
-      <double>477.0</double>
+      <object idref="Point2D$Double3"/>
+      <double>216.0</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>648.0</double>
-     <double>477.0</double>
+     <double>589.0</double>
+     <double>216.0</double>
     </void>
    </object>
   </void>
-  <void method="addNode">
-   <object class="com.horstmann.violet.product.diagram.state.CircularFinalStateNode" id="CircularFinalStateNode0"/>
-   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double5">
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>x</string>
-     <void method="set">
-      <object idref="Point2D$Double5"/>
-      <double>690.0</double>
-     </void>
-    </void>
-    <void class="java.awt.geom.Point2D$Double" method="getField">
-     <string>y</string>
-     <void method="set">
-      <object idref="Point2D$Double5"/>
-      <double>591.0</double>
-     </void>
-    </void>
-    <void method="setLocation">
-     <double>690.0</double>
-     <double>591.0</double>
+  <void method="connect">
+   <object class="com.horstmann.violet.StateTransitionEdge"/>
+   <object idref="CircularInitialStateNode0"/>
+   <object idref="StateNode1"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.StateTransitionEdge">
+    <void property="label">
+     <string>applied[selfSourced==true OR advertised==true]</string>
     </void>
    </object>
+   <object idref="StateNode1"/>
+   <object idref="StateNode2"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.StateTransitionEdge">
+    <void property="label">
+     <string>approvedAccepedOffer[false]</string>
+    </void>
+   </object>
+   <object idref="StateNode2"/>
+   <object idref="StateNode1"/>
   </void>
   <void method="connect">
    <object class="com.horstmann.violet.StateTransitionEdge">
     <void property="label">
      <string>approveAcceptedOffer[true]</string>
-    </void>
-   </object>
-   <object idref="StateNode0"/>
-   <object idref="StateNode1"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="CircularInitialStateNode0"/>
-   <object idref="StateNode2"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode1"/>
-   <object idref="StateNode3"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge"/>
-   <object idref="StateNode3"/>
-   <object idref="CircularFinalStateNode0"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge">
-    <void property="label">
-     <string>approvedAcceptedOffer[false]</string>
-    </void>
-   </object>
-   <object idref="StateNode0"/>
-   <object idref="StateNode2"/>
-  </void>
-  <void method="connect">
-   <object class="com.horstmann.violet.StateTransitionEdge">
-    <void property="label">
-     <string>applied[selfSourced=true or advertised=true]</string>
     </void>
    </object>
    <object idref="StateNode2"/>
