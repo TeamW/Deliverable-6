@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.7.0_09" class="java.beans.XMLDecoder">
+<java version="1.7.0_13" class="java.beans.XMLDecoder">
  <object class="com.horstmann.violet.ClassDiagramGraph">
   <void method="addNode">
    <object class="com.horstmann.violet.InterfaceNode" id="InterfaceNode0">
     <void property="methods">
      <void property="text">
-      <string>publishAdvertisement() : void
-registerNewEmployer() : boolean
-approveAcceptedOffer() : void
-assignAcademicVisitor() : void
-createNewAdvertisement() : Advertisement
-selectStudent() : Student
-recordVisitAssessment() : void</string>
+      <string>publishAdvertisement(int advertisementIndex, String comment) : void
+registerNewEmployer(String name, String email) : boolean
+approveAcceptedOffer(String matriculation) : void
+assignAcademicVisitor(String matriculation, String visitorName) : void
+createNewAdvertisement(Employer e, String applicationDetails) : Advertisement
+selectStudent(String matriculation) : Student
+getStudents() : Map&lt;String,Student&gt;
+recordVisitAssessment(String matriculation, UoGGrade grade, String description) : void
+getCurrentEmployer(String employer) : Employer
+getCourseCoordinator() : CourseCoordinator</string>
      </void>
     </void>
     <void property="name">
@@ -24,22 +27,20 @@ recordVisitAssessment() : void</string>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>x</string>
      <void method="set">
-      <object idref="Point2D$Double0">
-       <void class="java.awt.geom.Point2D$Double" method="getField">
-        <string>y</string>
-        <void method="set">
-         <object idref="Point2D$Double0">
-          <void method="setLocation">
-           <double>464.0</double>
-           <double>84.0</double>
-          </void>
-         </object>
-         <double>84.0</double>
-        </void>
-       </void>
-      </object>
+      <object idref="Point2D$Double0"/>
       <double>464.0</double>
      </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double0"/>
+      <double>84.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>464.0</double>
+     <double>84.0</double>
     </void>
    </object>
   </void>
@@ -53,8 +54,10 @@ userDatabase : UserDatabaseInterface</string>
     </void>
     <void property="methods">
      <void property="text">
-      <string>changeStudentStatus() : boolean
+      <string>getInstance() : Admin
+changeStudentStatus() : boolean
 changeAdvertisementStatus() : void
+
 </string>
      </void>
     </void>
@@ -68,22 +71,20 @@ changeAdvertisementStatus() : void
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>x</string>
      <void method="set">
-      <object idref="Point2D$Double1">
-       <void class="java.awt.geom.Point2D$Double" method="getField">
-        <string>y</string>
-        <void method="set">
-         <object idref="Point2D$Double1">
-          <void method="setLocation">
-           <double>414.0</double>
-           <double>316.0</double>
-          </void>
-         </object>
-         <double>316.0</double>
-        </void>
-       </void>
-      </object>
-      <double>414.0</double>
+      <object idref="Point2D$Double1"/>
+      <double>555.0</double>
      </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double1"/>
+      <double>349.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>555.0</double>
+     <double>349.0</double>
     </void>
    </object>
   </void>
