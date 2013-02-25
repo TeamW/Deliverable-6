@@ -123,14 +123,11 @@ one component, the `Session' may have to be modified.
 
 The form of the state chart was decided based on the simplistic nature of an 
 advertisements status. All adverts start off life as pending, after a company
-has made the initial submission. They can be revised at any time prior to either
-being declined by the course coordinator, where they are removed from the system
-(and feedback sent to the company) or published for viewing.
-
-An addition (which requires clarification) is the `Position Filled' state and
-associated end state. This is asked in the questions section at the end of the
-document. The question is number \ref{itm:advertDestroy}. As such, that part of 
-the diagram is under review pending further information.
+has made the initial submission - however this is outside the scope of
+the current system as it is not a ``must have'' use case. They can be
+revised at any time prior to either being declined by the course
+coordinator, where they are removed from the system and feedback sent
+to the company(outside the scope) or published for viewing.
 
 \subsection{Student}
 
@@ -143,21 +140,18 @@ the diagram is under review pending further information.
 We decided to create a state chart for a Student's flow through the
 system as to clarify the functionality of the system with relation to
 the student, and also for a base reason of a student having a
-different state at multiple points in the system. There are various
-paths that a student can take through this system and ultimately
-result in the same final state, this is modelling the best case
-scenario for a student where a student will eventually end up with an
-approved final placement, which we have interpreted as being one of
-the main functionalities of the system. 
+different state at multiple points in the system. There is one main
+state that a student can take through this system to result in the
+final state, this is modelling the best case scenario for a student
+where a student will eventually end up with an approved final
+placement, which we have interpreted as being one of the main
+functionalities of the system. 
 
 A student continually changes state between `Idle' and `Pending
 Acceptance' (through either `Applied for Position' or `Found Self
 Sourced Role') potentially multiple times until a suitable position
 has been found and only then they will progress on to `Offer
-Approved'. A Student will then be stagnant until a visit has been
-undertaken and then the student will terminate. A visit is outside the
-control of the Student, so it will stay in this state until changed by
-an outside element.
+Approved' which is the final resting state of this entity.
 
 \newpage
 
