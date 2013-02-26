@@ -469,22 +469,21 @@ companies, a separate store for their user information will be used.\\
 
 \begin{itemize}
 
-\item{\textbf{public boolean addCompany(String name, String email, String 
-password)}
+\item{\textbf{public boolean addEmployer(Employer e)}
 
-Add information about a company to the database.
+Add information about an employer to the database.
 
 \textbf{Preconditions:} Database must not already contain details of the 
-company.
+employer.
 
 \textbf{Invariants:}
 
-\textbf{Postconditions:} Database now contains information about a company 
+\textbf{Postconditions:} Database now contains information about an employer 
 including their login password.}
 
-\item{\textbf{public Company getCompany(String name)}
+\item{\textbf{public Employer getEmployer(String username)}
 
-Gets information about the company with the given name.
+Gets the employer with the given username.
 
 \textbf{Preconditions:}
 
@@ -493,19 +492,16 @@ Gets information about the company with the given name.
 \textbf{Postconditions:} If a valid name is given, the object associated with
 the company is returned, otherwise null is returned.}
 
-\item{\textbf{public Student getStudent(String guid)}
+\item{\textbf{public Map<String,Student> getStudents()}
 
-Gets information about the student with the given GUID from MyCampus and the
-application's user specific information database (such as internship progress).
+Returns the mapping of String matriculation to Student's in the system.
 
 \textbf{Preconditions:}
 
 \textbf{Invariants:}
 
-\textbf{Postconditions:} If a valid GUID is given, the object associated with
-the student is returned, otherwise null is returned. If this is the first time
-a student has been asked for, a record will be added to the user specific
-information database.}
+\textbf{Postconditions:}
+}
 
 \item{\textbf{public void updateStudent(Student student)}
 
@@ -517,7 +513,70 @@ is known to the application's user database.
 
 \textbf{Invariants:}
 
-\textbf{Postconditions:} Student's user specific information is up to date.}
+\textbf{Postconditions:} Student's user specific information is up to
+date.}
+
+\item{\textbf{public CourseCoordinator courseCoordinator()}
+
+Returns the current course coordinator of the system.
+
+\textbf{Preconditions:} 
+
+\textbf{Invariants:}
+
+\textbf{Postconditions:} If a course coordinator exists within the
+system then they are returned (providing that the current user has
+sufficient rights to do so) and if it does not then null is returned.}
+
+\item{\textbf{public void changeCourseCoordinator(String username,
+    String password)}
+Changes the current Course Coordinators login details to the ones
+supplied by the arguments username and password.
+
+\textbf{Preconditions:}
+
+\textbf{Invariants:}
+
+\textbf{Postconditions:}}
+
+\item{\textbf{public boolean loginStudent(String username, String
+    password)} 
+Returns whether or not the given username and password are valid
+entries in the respective database.
+
+\textbf{Preconditions:}
+
+\textbf{Invariants:}
+
+\textbf{Postconditions:}
+
+}
+
+\item{\textbf{public boolean loginEmployer(String username, String
+    password)} 
+Returns whether or not the given username and password are valid
+entries in the respective database.
+
+\textbf{Preconditions:}
+
+\textbf{Invariants:}
+
+\textbf{Postconditions:}
+
+}
+
+\item{\textbf{public boolean loginCourseCoordinator(String username, String
+    password)} 
+Returns whether or not the given username and password are valid
+entries in the respective database.
+
+\textbf{Preconditions:}
+
+\textbf{Invariants:}
+
+\textbf{Postconditions:}
+
+}
 
 \end{itemize}
 
