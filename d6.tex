@@ -53,7 +53,11 @@ PSD3 Group Exercise Description:
 
 PSD3 Requirements Specification:
 
-\url{fims.moodle.gla.ac.uk/file.php/128/coursework/requirements-specification-ge2.pdf}
+\url{http://fims.moodle.gla.ac.uk/file.php/128/coursework/requirements-specification-ge2.pdf}
+
+PSD3 Forum Information:
+
+\url{http://http://fims.moodle.gla.ac.uk/mod/forum/view.php?id=20433}
 
 \subsection{Purpose and Description Of Document}
 
@@ -77,6 +81,10 @@ Change log:
 \item Updated introduction section to include requirements specification document
 link and states that the document contains the acceptance test plan.
 \item Updated system architecture diagram based on feedback.
+\item Updated class diagrams and state diagrams.
+\item Updated API specification.
+\item Updated acceptance test plan to reflect actual test plan.
+\item Updated with respect to forum information.
 \end{enumerate}
 
 \newpage
@@ -179,7 +187,8 @@ of type student, they'll only be able to view all published adverts.
 
 \begin{itemize}
 
-\item{\textbf{public Advertisement createNewAdvertisement(String applicationDetails)}
+\item{\textbf{public Advertisement createNewAdvertisement(Employer e,
+      String applicationDetails)}
 
 Create a new advert with the specified details
 
@@ -333,27 +342,27 @@ during this review process.
 Sends email to student, visitor and employer manager to let them know about
 assignment. 
 
-\textbf{Preconditions: An academic visit cannot be currently assigned.}
+\textbf{Preconditions:} An academic visit cannot be currently assigned.
 
 \textbf{Invariants:} 
 
 \textbf{Postconditions:} }
 %%%%%%%%%%%%%%%
-\item{\textbf{public Advertisement createNewAdvertisement(String
-    applicationDetails)}
+\item{\textbf{public Advertisement createNewAdvertisement(Employer e,
+      String applicationDetails)}
 Adds a new (not-yet-approved) advertisement into the system.
 
-\textbf{Preconditions: Advertisement should not all ready exist in the
-  system.}
+\textbf{Preconditions:} Advertisement should not all ready exist in the
+  system.
 
 \textbf{Invariants:} 
 
 \textbf{Postconditions:} }
 %%%%%%%%%%%%%%%
-\item{\textbf{public Student selectStudent(String matriculation)}
+\item{\textbf{public Student selectStudent( String matriculation)}
 Gets handle on Student from supplied matriculation.
 
-\textbf{Preconditions: Null returned if Student is not in the map.}
+\textbf{Preconditions:} Null returned if Student is not in the map.
 
 \textbf{Invariants:} 
 
@@ -361,14 +370,44 @@ Gets handle on Student from supplied matriculation.
 %%%%%%%%%%%%%%%
 \item{\textbf{public void recordVisitAssessment( String matriculation,
     UoGGrade grade, String description)}
-Records grade for visit. EMail to student and employer.
+Records grade for visit. Email to student and employer.
 
-\textbf{Preconditions: A visit assessment should not currently be
-  assigned for this student}
+\textbf{Preconditions:} A visit assessment should not currently be
+  assigned for this student
 
 \textbf{Invariants:} 
 
 \textbf{Postconditions:} }
+%%%%%%%%%%%%%%
+\item{\textbf{public Map<String,Student>getStudents()}
+Returns a Mapping from matriculation to Student for every student in
+the system.
+
+\textbf{Preconditions:}
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+%%%%%%%%%%%%%%
+\item{\textbf{public Employer getCurrentEmployer( String employer )}
+Selects the employer given by the String ``Employer''.
+
+\textbf{Preconditions: Employer employer should exist within the
+  system.}
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+%%%%%%%%%%%%%%
+\item{\textbf{public CourseCoordinator getCourseCoordinator() }
+Gets the systems current Course Coordinator.
+
+\textbf{Preconditions: }
+
+\textbf{Invariants:} 
+
+\textbf{Postconditions:} }
+
 
 \end{itemize}
 
@@ -397,14 +436,13 @@ presented with the summary of advertisements view.\\
 Check if a user is in database 
 
 \textbf{Preconditions:} No user is currently logged in at the same user 
-interface.
+interface.}
+
+\textbf{Invariants:}
 
 \textbf{Postconditions:} User is logged in, if username and password combination 
-is correct.}
-
-\item{\textbf{public Boolean userLoggedIn(String id)}
-
-Check if a user is already logged in at the same user interface.}
+is correct.
+} 
 
 \end{itemize}
 
@@ -414,7 +452,7 @@ Check if a user is already logged in at the same user interface.}
 
 \subsubsection{Class Diagram}
 
-\includegraphics{databaseClassDiagram.png}
+\includegraphics[width=\textwidth]{databaseClassDiagram.png}
 
 \subsubsection{API Specification}
 
@@ -486,24 +524,5 @@ is known to the application's user database.
 \newpage
 
 \include{testCasesReview}
-
-\newpage
-
-\section{Requirements Specification Questions}
-
-\begin{enumerate}
-
-\item{Employers are required to register however during the registration process
-only the company name and email is supplied (registerNewEmployer()). However,
-users are required to supply their username and password to login. Based on the
-assumption that the employer/company name is the username, what would the
-password initially be set to?}
-
-\item{How does the course coordinator decline an offer a student has received?}
-
-\item{\label{itm:advertDestroy} When and how does an approved/published 
-advertisement disappear from the set of available advertisements?}
-
-\end{enumerate}
 
 \end{document}
